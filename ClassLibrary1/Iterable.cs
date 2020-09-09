@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace prog
+namespace ClassLibrary1
 {
-    class Program
+    interface Iterable
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        Iterator CreateIterator();
     }
 }
