@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using ClassLibrary1;
 
 namespace prog
 {
@@ -9,7 +10,14 @@ namespace prog
     {
         static void Main(string[] args)
         {
-            
+            FileStringIterable iterable1 = new FileStringIterable("C://test.txt");
+            var iterator1 = iterable1.CreateIterator();
+            if (iterator1.IsDone())
+            {
+                Console.WriteLine(" iterator1.IsDone() + ");
+            }
+            //FileStringIterator iterator1 = new FileStringIterator(iterable1);
+            Console.ReadLine();
         }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ClassLibrary1
 {
-    interface Iterator
+    public interface Iterator
     {
         void First();
         void Next();

@@ -6,11 +6,21 @@ using System.IO;
 
 namespace ClassLibrary1
 {
-    class FileStringIterable : Iterable
+    public class FileStringIterable : Iterable
     {
+        private string path;
+        private string[] content;
+
+        public FileStringIterable(string path)
+        {
+            this.content = File.ReadAllLines(path);
+            this.path = path;
+        }
+
         public Iterator CreateIterator()
         {
-            throw new NotImplementedException();
+            Console.Write(" CreateIterator + ");
+            return new FileStringIterator(this);
         }
     }
 }

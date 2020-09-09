@@ -7,6 +7,13 @@ namespace ClassLibrary1
 {
     public class FileStringIterator : Iterator
     {
+        private int index;
+
+        public FileStringIterator(FileStringIterable fsIterable)
+        {
+            this.index = 0;
+        }
+
         public string CurrentItem()
         {
             throw new NotImplementedException();
@@ -14,6 +21,7 @@ namespace ClassLibrary1
 
         public void First()
         {
+            this.index = 0;
             throw new NotImplementedException();
         }
 
@@ -24,6 +32,7 @@ namespace ClassLibrary1
 
         public void Next()
         {
+            this.index++;
             throw new NotImplementedException();
         }
     }
