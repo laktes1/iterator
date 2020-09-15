@@ -9,7 +9,7 @@ namespace ClassLibrary1
     public class FileStringIterable : Iterable
     {
         private string path;
-        private string[] content;
+        public string[] content;
 
         public FileStringIterable(string path)
         {
