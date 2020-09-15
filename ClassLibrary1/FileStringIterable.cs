@@ -9,7 +9,7 @@ namespace ClassLibrary1
     public class FileStringIterable : Iterable
     {
         private string path;
-        public string[] content;
+        public string[] content { get; private set; }
 
         public FileStringIterable(string path)
         {
@@ -19,7 +19,6 @@ namespace ClassLibrary1
 
         public Iterator CreateIterator()
         {
-            Console.Write(" CreateIterator + ");
             return new FileStringIterator(this);
         }
     }
