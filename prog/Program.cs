@@ -10,8 +10,8 @@ namespace prog
     {
         static void Main(string[] args)
         {
-//            FileStringIterable iterable1 = new FileStringIterable("C://test.txt");
-            FileStringIterable iterable1 = new FileStringIterable("C:\\Users\\student\\test.txt");
+            FileStringIterable iterable1 = new FileStringIterable("C://test.txt");
+            //FileStringIterable iterable1 = new FileStringIterable("C:\\Users\\student\\test.txt");
             var iterator1 = iterable1.CreateIterator();
             while (!iterator1.IsDone())
             { 
