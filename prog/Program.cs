@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ClassLibrary1;
+using FileStringIterator.Lib;
+using System.IO;
 
 namespace prog
 {
@@ -10,24 +11,26 @@ namespace prog
     {
         static void Main(string[] args)
         {
-//            FileStringIterable iterable1 = new FileStringIterable("C://test.txt");
-            FileStringIterable iterable1 = new FileStringIterable("C:\\Users\\student\\test.txt");
-            var iterator1 = iterable1.CreateIterator();
-            while (!iterator1.IsDone())
-            { 
-                Console.WriteLine( iterator1.CurrentItem());
-                iterator1.Next();
-            }
-
-            var iterator2 = iterable1.CreateIterator();
-            while (!iterator2.IsDone())
+            try
             {
-                Console.WriteLine(iterator2.CurrentItem());
-                iterator2.Next();
-                iterator2.Next();
+                Iterable iterable1 = CreateFileIterable();
+                var iterator1 = iterable1.CreateIterator();
+                while (!iterator1.IsDone())
+                {
+                    Console.WriteLine(iterator1.CurrentItem());
+                    iterator1.Next();
+                }
             }
-            //FileStringIterator iterator1 = new FileStringIterator(iterable1);
+            catch (FileNotFoundException e)
+            {
+                Console.WriteLine("ОШИБКА: {0}", e.Message);
+            }
             Console.ReadLine();
+        }
+
+        private static Iterable CreateFileIterable()
+        {
+            return new FileStringIterable("C:\\Users\\student\\test.txt");
         }
     }
 }

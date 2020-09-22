@@ -7,8 +7,8 @@
     <ProjectGuid>{E63A07E0-7B61-4232-8CC7-ECF49AD07637}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ClassLibrary1</RootNamespace>
-    <AssemblyName>ClassLibrary1</AssemblyName>
+    <RootNamespace>FileStringIterator.Lib</RootNamespace>
+    <AssemblyName>FileStringIterator.Lib</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
