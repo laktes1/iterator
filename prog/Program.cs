@@ -30,7 +30,9 @@ namespace prog
 
         private static Iterable CreateFileIterable()
         {
-            return new FileStringIterable("C:\\Users\\student\\test.txt");
+            //return new FileStringIterable("C:\\Users\\student\\test.txt");
+            return new FileStringIterable("C:\\test.txt");
+
         }
     }
 }
